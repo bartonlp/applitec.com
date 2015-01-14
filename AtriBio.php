@@ -1,9 +1,16 @@
 <?php
-$arg['title'] = "Applitec.com Company Information - Electrical Engineering, Software, Firmware";
-$arg['desc'] = "Applied Technology Resources, Inc. Home Page -- Engineering Consulting, Hardware and Software";
-include("header.i.php");
-include("banner.i.html");
-?>
+// BLP 2015-01-14 -- use siteautoload
+require_once("/var/www/includes/siteautoload.php");
+
+$S = new Applitec;
+
+$h->title = "AppliTech Company Information -- Electrical, Software, ".
+            "Firmware Engineering Consulting";
+
+list($top, $footer) = $S->getPageTopBottom($h);
+
+echo <<<EOF
+$top
 <main id="top">
 <img border="0" src="images/museum.gif" alt="">
 
@@ -135,4 +142,5 @@ Mr. Marcinak has a BS in Electronic Engineering Technology from California Polyt
 width="40"></a>
 </main>
 <hr>
-<?php include("footer.i.html"); ?>
+$footer
+EOF;

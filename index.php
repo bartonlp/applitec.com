@@ -1,9 +1,22 @@
 <?php
-$arg['title'] = "AppliTech Home Page: -- Electrical, Software, Firmware Engineering Consulting";
-$arg['desc'] = "Applied Technology Resources, Inc. Home Page -- Engineering Consulting, Hardware and Software";
-include("header.i.php");
-include("banner.i.html");
+// BLP 2015-01-14 -- Moved from Register.com around Jan. 10, 2015. Initially I put a
+// header() redirect in the index.php on the register.com server. I am in the
+// process of transfering the applitec.com domain name from Register.com to
+// eNom.com. When the move is finalized I will up date these comments.
+// Applitec.com does not YET use the siteautoload.php mechanism and instead includes
+// its header.i.php, banner.i.php and footer.i.php files manually. I will endevor to
+// upgrade these pages to use the siteautoload like all of the other sites.
+
+require_once("/var/www/includes/siteautoload.php");
+
+$S = new Applitec;
+
+$h->title = "AppliTech Home Page: -- Electrical, Software, ".
+            "Firmware Engineering Consulting";
+
+list($top, $footer) = $S->getPageTopBottom($h);
 echo <<<EOF
+$top
 <!-- Main body of the page -->
 <main id="applitecServices">
   <h1>Applitec Services</h1>
@@ -61,8 +74,6 @@ echo <<<EOF
  
   </div>
 </main>
-
+$footer
 EOF;
-include("footer.i.html");
-?>
 

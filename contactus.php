@@ -1,9 +1,17 @@
 <?php
-$arg['title'] = "Address and a WEB Page";
-$arg['desc'] = "Applitec.com Contact Us - Engineering Consulting, Hardware and Software";
-include("header.i.php");
-include("banner.i.html");
-?>
+// BLP 2015-01-14 -- use siteautoload
+require_once("/var/www/includes/siteautoload.php");
+
+$S = new Applitec;
+
+$h->title = "AppliTech Contact Us -- Electrical, Software, ".
+            "Firmware Engineering Consulting";
+
+list($top, $footer) = $S->getPageTopBottom($h);
+
+  
+echo <<<EOF
+$top
 <main>
 <p>Contact us via E-Mail: </p>
 <div align="left">
@@ -21,5 +29,5 @@ include("banner.i.html");
 </table>
 </div>
 </main>
-
-<?php include("footer.i.html"); ?>
+$footer
+EOF;

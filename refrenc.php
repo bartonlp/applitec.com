@@ -1,9 +1,16 @@
 <?php
-$arg['title'] = "Applitec.com References - Enginerring Consulting, Hardware and Software";
-$arg['desc'] = "Applitec.com References - Engineering Consulting, Hardware and Software";
-include("header.i.php");
-include("banner.i.html");
-?>
+// BLP 2015-01-14 -- use siteautoload
+require_once("/var/www/includes/siteautoload.php");
+
+$S = new Applitec;
+
+$h->title = "AppliTech References -- Electrical, Software, ".
+            "Firmware Engineering Consulting";
+
+list($top, $footer) = $S->getPageTopBottom($h);
+
+echo <<<EOF
+$top
 <main>
 <img style="margin-top: 10px;" src="images/CYLINDR.gif" alt="">
 <h2>Company References</H2>
@@ -63,6 +70,7 @@ include("banner.i.html");
 <a href="http://www.patentstorm.us/patents/6252942/description.html">Link</a></li>
 </ul>
 <main>
+$footer
+EOF;
 
-<?php include("footer.i.html"); ?>
 

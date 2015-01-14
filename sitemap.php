@@ -1,9 +1,16 @@
 <?php
-$arg['title'] = "AppliTech Site Map -- Electrical, Software, Firmware Engineering Consulting";
-$arg['desc'] = "Applied Technology Resources, Inc. Site Map -- Engineering Consulting, Hardware and Software";
-include("header.i.php");
-include("banner.i.html");
-?>
+// BLP 2015-01-14 -- use siteautoload
+require_once("/var/www/includes/siteautoload.php");
+
+$S = new Applitec;
+
+$h->title = "AppliTech Site Map -- Electrical, Software, ".
+            "Firmware Engineering Consulting";
+
+list($top, $footer) = $S->getPageTopBottom($h);
+
+echo <<<EOF
+$top
 <br>
 <table border=0>
 <tr>
@@ -21,5 +28,7 @@ include("banner.i.html");
 <li><a href="refrence.php">References</a></li>
 <li><a href="contactus.php">Contact Us</a></li>
 </ul>
-<?php include("footer.i.html"); ?>
+$footer
+EOF;
+
 
