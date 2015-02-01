@@ -7,8 +7,7 @@
 // its header.i.php, banner.i.php and footer.i.php files manually. I will endevor to
 // upgrade these pages to use the siteautoload like all of the other sites.
 
-require_once("/var/www/includes/siteautoload.php");
-
+require_once("/var/www/includes/siteautoload.class.php");
 $S = new Applitec;
 
 $h->title = "AppliTech Home Page: -- Electrical, Software, ".
@@ -73,6 +72,8 @@ $top
   </ul>
  
   </div>
+  <br>
+  <a href="aboutwebsite.php">About This Site</a>
 </main>
 $footer
 EOF;

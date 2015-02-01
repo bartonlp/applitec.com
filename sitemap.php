@@ -1,7 +1,6 @@
 <?php
 // BLP 2015-01-14 -- use siteautoload
-require_once("/var/www/includes/siteautoload.php");
-
+require_once("/var/www/includes/siteautoload.class.php");
 $S = new Applitec;
 
 $h->title = "AppliTech Site Map -- Electrical, Software, ".
@@ -27,8 +26,7 @@ $top
 <li><a href="AtriBio.php">Company Information and Biography</a></li>
 <li><a href="refrence.php">References</a></li>
 <li><a href="contactus.php">Contact Us</a></li>
+<li><a href="aboutwebsite.php">About This Website</a></li>
 </ul>
 $footer
 EOF;
-
-

@@ -1,7 +1,6 @@
 <?php
 // BLP 2015-01-14 -- use siteautoload
-require_once("/var/www/includes/siteautoload.php");
-
+require_once("/var/www/includes/siteautoload.class.php");
 $S = new Applitec;
 
 $h->title = "AppliTech Company Information -- Electrical, Software, ".
