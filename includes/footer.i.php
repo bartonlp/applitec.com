@@ -1,23 +1,19 @@
 <?php
-  $pageFooterText = <<<EOF
+
+$pageFooterText = <<<EOF
 <footer>
-<p>
-<a href="/">Return to Applitec Home Page</a>
-</p>
+{$arg['msg']}
 <hr>
-<br>
+{$arg['msg1']}
+<h3 class='center'><a href="aboutwebsite.php">About This Site</a></h3>
 <address>
-  Copyright &copy; 1996-2015 Applied Technology Resources, Inc.<br>
+  Copyright &copy; $this->copyright<br>
   23542 Lyons Ave. #209<br>
   Newhall, CA 91321<br>
   <a href="mailto:barton@applitec.com?SUBJECT=WebMaster+feedback">webmaster@applitec.com</a><br>
   Phone: (818)652-9849<br>
 </address>
-<p>
-<a style="color: white" href="http://www.bartonphillips.com">www.bartonphillips.com</a><br/>
-<a style="color: white" href="http://www.bartonphillips.org">www.bartonphillips.org</a><br/>
-<a style="color: white" href="http://www.granbyrotary.org">www.granbyrotary.org</a><br/>
-</p>
+{$arg['msg2']}
 </footer>
 <!-- Start of StatCounter Code for Default Guide -->
 <script type="text/javascript">

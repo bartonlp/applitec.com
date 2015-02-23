@@ -1,26 +1,21 @@
 <?php
-   // For Digital Ocian
-   // For bartonlp.com we have /var/www which has two directories: html and mpc.
-   // The html directory has the expermental home page and mpc has the myphotochannel
-   // expermental site.
-   // This is www.bartonlp.com site.
-   
-   // Site map
-   // This is included by the siteautoload.php which is called from each page file.
-   // This file should only be loaded via the siteautoload.php file.
-   // This file has the sitemap which defines the various location where things can be found.
-   // DOC_ROOT, SITE_ROOT and TARGET_ROOT are defined by the siteautoload.php
-
-   // TOP would be '/var/www' on bartonlp.com because we keep the include file that
-   // are common to all sites in the '/var/www/ludes' directory which also has the
-   // 'database-engines' directory.
-   // SITE_INCLUDES is under the SITE_ROOT which is where we found the '.sitemap.php'
-   // file during our search in siteautoload.php.
-   // After the four path defines we have defines for our LOGFILE and the email addresses
-   // used to send emails when errors occur.
-   // After the email defines we have two arrays, one for the database information
-   // ($dbinfo), and one for the site information ($siteinfo).
-   // These are used by the Database class and the SiteClass.
+// BLP 2015-02-20 -- added 'copywrite' to siteinfo.  
+// Site map
+// This is included by the /siteautoload.php which is called from each page file.
+// This file should only be loaded via the siteautoload.php file.
+// This file has the sitemap which defines the various location where things can be found.
+// DOC_ROOT and SITE_ROOT are defined by the siteautoload.class.php
+// TOP is the path to the very top of the website. For example on digitalocean.com that is
+// /var/www. All the sites are relative to TOP. The main include directory which has
+// SiteClass.class.php is at TOP . "/includes/".
+// SITE_INCLUDES is under the SITE_ROOT which is where we found the '.sitemap.php' file during
+// our search in siteautoload.class.php. On digitalocean.com this would be something like
+// '/var/www/bartonphillipsdotcom/'.
+// After the four path defines we have defines for our LOGFILE and the email addresses used to
+// send emails when errors occur.
+// After the email defines we have two arrays, one for the database information ($dbinfo),
+// and one for the site information ($siteinfo). These are used by the Database class and 
+// SiteClass.class.php.
    
 define('TOP', '/var/www/'); // for bartonlp.com which is like our Dell-530 home system.
 define('INCLUDES', TOP."/includes"); // /var/www/includes
@@ -42,7 +37,7 @@ define('EMAILFROM', "webmaster@bartonlp.com");
 $dbinfo = array('host' => 'localhost',
                 'user' => 'barton',
                 'password' => '7098653',
-                'database' => 'barton',
+                'database' => 'applitecdotcom',
                 'engine' => 'mysqli'
                );
 
@@ -51,15 +46,17 @@ $dbinfo = array('host' => 'localhost',
 // See the SiteClass constructor for other possible values like 'count',
 // 'emailDomain' etc.
 
-$siteinfo = array('siteDomain' => "www.applitec.com",
-                  'emailDomain' => "applitec.com",
-                  //'memberTable' => "blpmembers", // www.bartonlp.com has not members
+$siteinfo = array('siteDomain' => "applitec.com",
+                  'siteName' => "Applied Technology Resources Inc.",
+                  //'emailDomain' => "applitec.com",
+                  'copyright' => "2015 Applied Technology Resources Inc.",
+                  'className' => "Applitec",
+                  //'memberTable' => "applitec",
                   'headFile' => SITE_INCLUDES."/head.i.php",
                   'bannerFile' => SITE_INCLUDES."/banner.i.php",
                   'footerFile' => SITE_INCLUDES."/footer.i.php",
                   'count' => false,
                   'countMe' => false, // Count BLP
-                  'myUri' => "bartonphillips.dyndns.org" // If we are local (at home) then 'localhost'
+                  'myUri' => "bartonphillips.dyndns.org"
                  );
 
-?>

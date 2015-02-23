@@ -6,15 +6,23 @@ $S = new Applitec;
 $h->title = "AppliTech Site Map -- Electrical, Software, ".
             "Firmware Engineering Consulting";
 
+$h->css =<<<EOF
+  <style>
+main {
+  margin-top: 2em;
+}
+  </style>
+EOF;
+
 list($top, $footer) = $S->getPageTopBottom($h);
 
 echo <<<EOF
 $top
-<br>
-<table border=0>
+<main>
+<table>
 <tr>
 <td>
-<img border=0 src="images/CIRCULA.gif" alt="">
+<img src="images/CIRCULA.gif" alt="">
 </td>
 <td valign=bottom><h1>Site Map</h1></td>
 </tr>
@@ -24,9 +32,10 @@ $top
 <ul>
 <li><a href="index.php">Applitec Home Page</a></li>
 <li><a href="AtriBio.php">Company Information and Biography</a></li>
-<li><a href="refrence.php">References</a></li>
+<li><a href="refrenc.php">References</a></li>
 <li><a href="contactus.php">Contact Us</a></li>
 <li><a href="aboutwebsite.php">About This Website</a></li>
 </ul>
+</main>
 $footer
 EOF;

@@ -12,7 +12,7 @@ Applied Technology Resources,&nbsp;Inc.
 <ul>
  <li>
  <a href="sitemap.php">
- Our Site Map
+ Site Map
  </a>
  </li>
 
@@ -34,11 +34,6 @@ Applied Technology Resources,&nbsp;Inc.
  </a>
  </li>
 
- <li>
- <a href="mailto:barton@applitec.com?subject=Feedback">
- Feedback
- </a>
- </li>
 </ul>
 </div>
 
@@ -52,7 +47,6 @@ Applied Technology Resources,&nbsp;Inc.
     <li><a href="AtriBio.php">Company Info</a></li>
     <li><a href="refrenc.php">References</a></li>
     <li><a href="contactus.php">Contact Us</a></li>
-    <li><a href="mailto:barton@applitec.com?Subject=Feedback">Feedback</a></li>
   </ul>
 </div>
 </nav>

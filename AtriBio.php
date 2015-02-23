@@ -11,8 +11,8 @@ list($top, $footer) = $S->getPageTopBottom($h);
 echo <<<EOF
 $top
 <main id="top">
-<img border="0" src="images/museum.gif" alt="">
-
+<img src="images/museum.gif" alt="">
+<h2>Company Information</h2>
 <p><i>Appli</i><b>Tech</b> was founded in 1987 to provide
 its clients technical capabilities of unique depth
 and diversity.
@@ -138,8 +138,8 @@ Mr. Marcinak has a BS in Electronic Engineering Technology from California Polyt
 </p>
 
 <p><a href="#top"><img src="images/back.gif" alt="Return to top" border="0" height="40"
-width="40"></a>
+width="40"></a><br>
+<a href="/">Return to Applitec Home Page</a>
 </main>
-<hr>
 $footer
 EOF;

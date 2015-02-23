@@ -72,8 +72,6 @@ $top
   </ul>
  
   </div>
-  <br>
-  <a href="aboutwebsite.php">About This Site</a>
 </main>
 $footer
 EOF;
