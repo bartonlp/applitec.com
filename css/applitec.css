@@ -5,7 +5,7 @@ html {
   margin: auto;
 }
 body {
-  background-image: url(../images/Strip5.png);
+  background-image: url(http://bartonlp.com/html/images/Strip5.png);
   background-size: 45px;
   background-repeat: repeat-y;
   background-color: rgb(255,255,239);
@@ -149,7 +149,8 @@ h3 {
         #smallNavMap {
                 display: block;
         }
-        img[src="images/back.gif"], img[src="images/butmail.gif"] {
+        img[src="http://bartonlp.com/html/images/back.gif"],
+        img[src="http://bartonlp.com/html/images/butmail.gif"] {
                 display: none;
         }
         main > img {

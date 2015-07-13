@@ -21,7 +21,7 @@ $dl = "<dl>\n$dl\n</dl>";
 echo <<<EOF
 $top
 <main>
-<img style="margin-top: 10px;" src="images/CYLINDR.gif" alt="">
+<img style="margin-top: 10px;" src="http://bartonlp.com/html/images/CYLINDR.gif" alt="">
 <h2>Company References</H2>
 $dl
 <h3>Links:</h3>

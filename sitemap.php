@@ -22,7 +22,7 @@ $top
 <table>
 <tr>
 <td>
-<img src="images/CIRCULA.gif" alt="">
+<img src="http://bartonlp.com/html/images/CIRCULA.gif" alt="">
 </td>
 <td valign=bottom><h1>Site Map</h1></td>
 </tr>
