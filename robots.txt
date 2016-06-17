@@ -1,5 +1,9 @@
 User-agent: *
+Crawl-delay: 30
+Disallow: /MySitemap.php
 Disallow: /images/
 Disallow: /css/applitec.css
 Disallow: /css/nav.css
 
+User-agent: Baiduspider
+Disallow: /

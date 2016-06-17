@@ -1,14 +1,8 @@
 <?php
-// BLP 2015-01-14 -- Moved from Register.com around Jan. 10, 2015. Initially I put a
-// header() redirect in the index.php on the register.com server. I am in the
-// process of transfering the applitec.com domain name from Register.com to
-// eNom.com. When the move is finalized I will up date these comments.
-// Applitec.com does not YET use the siteautoload.php mechanism and instead includes
-// its header.i.php, banner.i.php and footer.i.php files manually. I will endevor to
-// upgrade these pages to use the siteautoload like all of the other sites.
+//$AutoLoadDEBUG = true;
+$_site = require_once(getenv("HOME")."/includes/siteautoload.class.php");
 
-require_once("/var/www/includes/siteautoload.class.php");
-$S = new Applitec;
+$S = new $_site['className']($_site);
 
 $h->title = "AppliTech Home Page: -- Electrical, Software, ".
             "Firmware Engineering Consulting";

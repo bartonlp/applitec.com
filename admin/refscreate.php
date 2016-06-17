@@ -16,8 +16,8 @@ CREATE TABLE `refs` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8
 */
 
-require_once("/var/www/includes/siteautoload.class.php");
-$S = new Applitec;
+$_site = require_once(getenv("HOME")."/includes/siteautoload.class.php");
+$S = new $_site['className']($_site);
 
 $ar = file("tmp.txt", FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
 $desc = '';

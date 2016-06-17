@@ -1,7 +1,7 @@
 <?php
 // BLP 2015-01-14 -- use siteautoload
-require_once("/var/www/includes/siteautoload.class.php");
-$S = new Applitec;
+$_site = require_once(getenv("HOME")."/includes/siteautoload.class.php");
+$S = new $_site['className']($_site);
 
 if($name = $_POST['name']) {
   mail("$name@applitec.com",

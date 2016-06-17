@@ -1,11 +1,12 @@
 <?php
 
-$pageFooterText = <<<EOF
+return <<<EOF
 <footer>
 {$arg['msg']}
-<hr>
+
 {$arg['msg1']}
-<h3 class='center'><a href="aboutwebsite.php">About This Site</a></h3>
+<h2 class='center'><a href="webstats-new.php">Web Stats</a><br>
+<a href="aboutwebsite.php">About This Site</a></h2>
 <address>
   Copyright &copy; $this->copyright<br>
   23542 Lyons Ave. #209<br>
@@ -13,7 +14,9 @@ $pageFooterText = <<<EOF
   <a href="mailto:barton@applitec.com?SUBJECT=WebMaster+feedback">webmaster@applitec.com</a><br>
   Phone: (818)652-9849<br>
 </address>
+<hr>
 {$arg['msg2']}
+$counterWigget
 </footer>
 <!-- Start of StatCounter Code for Default Guide -->
 <script type="text/javascript">

@@ -1,7 +1,7 @@
 <?php
 // BLP 2015-01-14 -- use siteautoload
-require_once("/var/www/includes/siteautoload.class.php");
-$S = new Applitec;
+$_site = require_once(getenv("HOME")."/includes/siteautoload.class.php");
+$S = new $_site['className']($_site);
 
 $h->title = "AppliTech Company Information -- Electrical, Software, ".
             "Firmware Engineering Consulting";
@@ -11,7 +11,7 @@ list($top, $footer) = $S->getPageTopBottom($h);
 echo <<<EOF
 $top
 <main id="top">
-<img src="http://bartonlp.com/html/images/museum.gif" alt="">
+<img src="/blp/images/museum.gif" alt="">
 <h2>Company Information</h2>
 <p><i>Appli</i><b>Tech</b> was founded in 1987 to provide
 its clients technical capabilities of unique depth
@@ -30,7 +30,7 @@ to assume complete project responsibility we are here to help you.
 </p>
 
 <p><b>Representative Industries and
-Clients:&nbsp;<a href="#top"><img src="http://bartonlp.com/html/images/back.gif" alt="Return to top"
+Clients:&nbsp;<a href="#top"><img src="/blp/images/back.gif" alt="Return to top"
 border="0" height="40" width="40"></a></b>
 </p>
 <ul>
@@ -63,11 +63,11 @@ border="0" height="40" width="40"></a></b>
 
 <h3>
 <a name="owner"></a>Glen H. Humphrey &ndash; President.&nbsp;
-<a href="#top"><img src="http://bartonlp.com/html/images/back.gif" alt="Return to top"
+<a href="#top"><img src="/blp/images/back.gif" alt="Return to top"
 border="0" height="40" width="40"></a>&nbsp; 
 <a href="mailto:glen@applitec.com">ghumphrey@applitec.com</a>
 <a href="mailto:applitec@instanet.com">&nbsp;</a>
-<a href="mailto:glen@applitec.com"><img src="http://bartonlp.com/html/images/butmail.gif" alt="Email Glen" border="0"
+<a href="mailto:glen@applitec.com"><img src="/blp/images/butmail.gif" alt="Email Glen" border="0"
 height="59" width="34"></a>
 </h3>
 
@@ -88,12 +88,12 @@ and electronics hardware design.</p>
 Barton L. Phillips  
 &nbsp;
 <a href="#top">
-  <img src="http://bartonlp.com/html/images/back.gif" alt="Return to top" border="0" height="40" width="40"> <!--  -->
+  <img src="/blp/images/back.gif" alt="Return to top" border="0" height="40" width="40"> <!--  -->
 </a>
 &nbsp;
 <a href="mailto:barton@applitec.com">barton@applitec.com&nbsp;</a>
 <a href="mailto:barton@applitec.com">
-  <img src="http://bartonlp.com/html/images/butmail.gif" alt="Email Barton" border="0" height="59" width="34">
+  <img src="/blp/images/butmail.gif" alt="Email Barton" border="0" height="59" width="34">
 </a>
 </h3>
 
@@ -118,12 +118,12 @@ of California at Los Angeles in 1964.</p>
 Alan Marcnak
 &nbsp;
 <a href="#top">
-  <img src="http://bartonlp.com/html/images/back.gif" alt="Return to top" border="0" height="40" width="40"> <!--  -->
+  <img src="/blp/images/back.gif" alt="Return to top" border="0" height="40" width="40"> <!--  -->
 </a>
 &nbsp;
 <a href="mailto:alan@applitec.com">alan@applitec.com&nbsp;</a>
 <a href="mailto:alan@applitec.com">
-  <img src="http://bartonlp.com/html/images/butmail.gif" alt="Email Allan" border="0" height="59" width="34">
+  <img src="/blp/images/butmail.gif" alt="Email Allan" border="0" height="59" width="34">
 </a>
 </h3>
 
@@ -137,7 +137,7 @@ prototype construction, surface mount work, test, debug, documentation, and on-s
 Mr. Marcinak has a BS in Electronic Engineering Technology from California Polytechnic State University, San Luis Obispo, CA.
 </p>
 
-<p><a href="#top"><img src="http://bartonlp.com/html/images/back.gif" alt="Return to top" border="0" height="40"
+<p><a href="#top"><img src="/blp/images/back.gif" alt="Return to top" border="0" height="40"
 width="40"></a><br>
 <a href="/">Return to Applitec Home Page</a>
 </main>

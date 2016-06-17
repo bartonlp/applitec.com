@@ -1,7 +1,7 @@
 <?php
 // BLP 2015-01-14 -- use siteautoload
-require_once("/var/www/includes/siteautoload.class.php");
-$S = new Applitec;
+$_site = require_once(getenv("HOME")."/includes/siteautoload.class.php");
+$S = new $_site['className']($_site);
 
 $h->title = "AppliTech References -- Electrical, Software, ".
             "Firmware Engineering Consulting";
@@ -21,7 +21,7 @@ $dl = "<dl>\n$dl\n</dl>";
 echo <<<EOF
 $top
 <main>
-<img style="margin-top: 10px;" src="http://bartonlp.com/html/images/CYLINDR.gif" alt="">
+<img style="margin-top: 10px;" src="/blp/images/CYLINDR.gif" alt="">
 <h2>Company References</H2>
 $dl
 <h3>Links:</h3>

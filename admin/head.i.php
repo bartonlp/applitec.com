@@ -1,5 +1,5 @@
 <?php
-  $pageHeadText = <<<EOF
+return <<<EOF
 <!DOCTYPE html> 
 <html>
 <head>

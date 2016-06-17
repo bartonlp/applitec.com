@@ -16,8 +16,9 @@ CREATE TABLE `refs` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8
 */
 
-require_once("/var/www/includes/siteautoload.class.php");
-$S = new Applitec;
+$_site = require_once(getenv("HOME")."/includes/siteautoload.class.php");
+
+$S = new $_site['className']($_site);
 
 switch(strtoupper($_SERVER['REQUEST_METHOD'])) {
   case "POST":

@@ -1,0 +1,6 @@
+RewriteEngine on
+RewriteRule ^robots\.txt$ robots.php [L,NC]
+RewriteRule ^Sitemap\.xml& sitemap.php [L]
+
+RewriteCond %{HTTP_USER_AGENT} "ahrefsbot|baiduspider|ezooms|yandex\.com" [NC]
+RewriteRule ^.*$ http://bartonlp.com/html/badbot.php [R,L]

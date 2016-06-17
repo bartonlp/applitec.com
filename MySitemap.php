@@ -17,18 +17,16 @@
 // and one for the site information ($siteinfo). These are used by the Database class and 
 // SiteClass.class.php.
    
-define('TOP', '/var/www/'); // for bartonlp.com which is like our Dell-530 home system.
+define('TOP', '/var/www'); // for bartonlp.com which is like our Dell-530 home system.
 define('INCLUDES', TOP."/includes"); // /var/www/includes
 define('DATABASE_ENGINES', INCLUDES."/database-engines");
 define('SITE_INCLUDES', SITE_ROOT."/includes"); // SITE_ROOT is defined in siteautoload.php!
 
-// Email info and logfile location
-
-define('LOGFILE', "/tmp/database.log");
+// Email info
 
 define('EMAILADDRESS', "bartonphillips@gmail.com");
 define('EMAILRETURN', "bartonphillips@gmail.com");
-define('EMAILFROM', "webmaster@bartonlp.com");
+define('EMAILFROM', "webmaster@applitec.com");
 
 // Database connection information
 // 'engine' is the type of database engine to use. Options are 'mysqli', 'sqlite'.
@@ -47,16 +45,22 @@ $dbinfo = array('host' => 'localhost',
 // 'emailDomain' etc.
 
 $siteinfo = array('siteDomain' => "applitec.com",
-                  'siteName' => "Applied Technology Resources Inc.",
+                  'siteName' => "Applitec",
                   //'emailDomain' => "applitec.com",
-                  'copyright' => "2015 Applied Technology Resources Inc.",
-                  'className' => "Applitec",
+                  'path' => '/var/www/applitec',
+                  'copyright' => "2016 Applied Technology Resources Inc.",
+                  'author' => "Barton L. Phillips, Applitec Inc., mailto:barton@applitec.com",
+                  'className' => "SiteClass",
                   //'memberTable' => "applitec",
+                  'masterdb' => 'barton',
+                  'dbinfo' => $dbinfo,
                   'headFile' => SITE_INCLUDES."/head.i.php",
                   'bannerFile' => SITE_INCLUDES."/banner.i.php",
                   'footerFile' => SITE_INCLUDES."/footer.i.php",
-                  'count' => false,
-                  'countMe' => false, // Count BLP
+                  'count' => true,
+                  'countMe' => true, // Count BLP
+                  'analysis' => true, // at barton.analysis table
+                  'trackerImg1' => "/images/blank.png", // script
+                  'trackerImg2' => "/images/blank.png", // normal
                   'myUri' => "bartonphillips.dyndns.org"
                  );
-

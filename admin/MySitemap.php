@@ -51,9 +51,14 @@ $dbinfo = array('host' => 'localhost',
 // See the SiteClass constructor for other possible values like 'count',
 // 'emailDomain' etc.
 
-$siteinfo = array('siteDomain' => "www.applitec.com",
+$siteinfo = array('siteDomain' => "applitec.com",
                   'emailDomain' => "applitec.com",
+                  'siteName' => null,
+                  'className' => "Applitec",
+                  'path' => "/var/www/applitec",
+                  'copyright' => "2016 Applited Technology Resources Inc.",
                   //'memberTable' => "blpmembers", // www.bartonlp.com has not members
+                  'dbinfo' => $dbinfo,
                   'headFile' => "head.i.php", // Custom for admin dir.
                   'bannerFile' => "../includes/banner.i.php",
                   'footerFile' => "../includes/footer.i.php",
