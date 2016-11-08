@@ -1,7 +1,10 @@
 <?php
 
+$lastmod = date("M j, Y H:i", getlastmod());
+
 return <<<EOF
 <footer>
+Return to Applitec <a class='underline' href="/">Home Page</a>
 {$arg['msg']}
 
 {$arg['msg1']}
@@ -17,6 +20,7 @@ return <<<EOF
 <hr>
 {$arg['msg2']}
 $counterWigget
+<p class="center">Last Modified: $lastmod</p>
 </footer>
 <!-- Start of StatCounter Code for Default Guide -->
 <script type="text/javascript">

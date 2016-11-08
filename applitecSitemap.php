@@ -1,7 +1,7 @@
 <?php
-// BLP 2015-01-14 -- use siteautoload
-$_site = require_once(getenv("HOME")."/includes/siteautoload.class.php");
-$S = new $_site['className']($_site);
+$_site = require_once(getenv("SITELOAD")."/siteload.php");
+ErrorClass::setDevelopment(true);
+$S = new $_site->className($_site);
 
 $h->title = "AppliTech Site Map -- Electrical, Software, ".
             "Firmware Engineering Consulting";
@@ -22,7 +22,7 @@ $top
 <table>
 <tr>
 <td>
-<img src="/blp/images/CIRCULA.gif" alt="">
+<img src="http://bartonphillips.net/images/CIRCULA.gif" alt="">
 </td>
 <td valign=bottom><h1>Site Map</h1></td>
 </tr>

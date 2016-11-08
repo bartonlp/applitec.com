@@ -1,0 +1,27 @@
+{
+    "siteDomain": "applitec.com",
+    "siteName": "Applitec",
+    "path": "/var/www/applitec",
+    "copyright": "2016 Applied Technology Resources Inc.",
+    "author": "Barton L. Phillips, Applitec Inc., mailto:barton@applitec.com",
+    "className": "SiteClass",
+    "masterdb": "barton",
+    "dbinfo": {
+        "host": "localhost",
+        "user": "barton",
+        "password": "7098653",
+        "database": "applitecdotcom",
+        "engine": "mysqli"
+    },
+    "headFile": "/var/www/applitec/includes/head.i.php",
+    "bannerFile": "/var/www/applitec/includes/banner.i.php",
+    "footerFile": "/var/www/applitec/includes/footer.i.php",
+    "count": true,
+    "countMe": true,
+    "trackerImg1": "/images/blank.png",
+    "trackerImg2": "/images/blank.png",
+    "myUri": "bartonphillips.dyndns.org",
+    "EMAILADDRESS": "bartonphillips@gmail.com",
+    "EMAILRETURN": "bartonphillips@gmail.com",
+    "EMAILFROM": "webmaster@applitec.com"
+}

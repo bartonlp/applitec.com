@@ -16,8 +16,8 @@ CREATE TABLE `refs` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8
 */
 
-$_site = require_once(getenv("HOME")."/includes/siteautoload.class.php");
-$S = new $_site['className']($_site);
+$_site = require_once(getenv("SITELOAD")."/siteload.php");
+$S = new $_site->className($_site);
 
 $ar = file("tmp.txt", FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
 $desc = '';

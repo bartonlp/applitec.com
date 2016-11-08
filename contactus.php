@@ -1,13 +1,13 @@
 <?php
-// BLP 2015-01-14 -- use siteautoload
-$_site = require_once(getenv("HOME")."/includes/siteautoload.class.php");
-$S = new $_site['className']($_site);
+$_site = require_once(getenv("SITELOAD")."/siteload.php");
+ErrorClass::setDevelopment(true);
+$S = new $_site->className($_site);
 
 if($name = $_POST['name']) {
   mail("$name@applitec.com",
        "{$_POST['subject']}",
        "{$_POST['message']}",
-       "From: info@applitec.com\r\nBCC:bartonphillips@gmail.com\r\n");
+       "From: info@applitec.com\r\nBcc:bartonphillips@gmail.com\r\n");
 
   header("location: index.php");
   exit();
@@ -19,6 +19,9 @@ switch($_GET['name']) {
     exit();
   case 'barton':
     emailform('barton', $S);
+    exit();
+  case 'alan':
+    emailform('alan', $S);
     exit();
   default:
     break;
@@ -52,44 +55,39 @@ $top
   </tr>
   <tr>
     <td>Barton Phillips:</td>
-    <td><a href="contactus.php?name=barton">barton@applitec.com</a> </td>
+    <td><a href="contactus.php?name=barton">barton@applitec.com</a></td>
   </tr>
-
+  <tr>
+    <td>Alan Marcnak:</td>
+    <td><a href="contactus.php?name=alan">alan@applitec.com</a></td>
+  </tr>
 </table>
 </div>
-<a href="/">Return to Applitec Home Page</a>
 </main>
 $footer
 EOF;
 
 function emailform($name, $S) {
   $h->title = "Email Form";
-  $h->banner = "<h1 class='center'>Email to $name</h1>";
+  $h->banner = "<h1 class='center'>Email to '$name@applitec.com'</h1>";
   $h->css =<<<EOF
   <style>
 main {
   padding: 1em;
 }
-
-form table {
-  width: 98%;
-  margin: auto;
-}
-form table th {
-  width: 1px;
-}
 form input {
-  font-size: 1em;
-  width: 98%;
+  font-size: 1rem;
+  padding-left: .3rem;
 }
 form input[type='submit'] {
-  width: 6em;
-  height: 2em;
-  border-radius: 1em;
+  height: 2rem;
+  border-radius: .3em;
 }
 form textarea {
   width: 98%;
-  height: 10em;
+  height: 5rem;
+  font-size: 1rem;
+  padding-left: .3rem;
 }
   </style>
 EOF;
@@ -100,14 +98,14 @@ EOF;
 $top
 <main>
 <form method='post'>
-<table id='emailform'>
-<tr><th>Subject</th><td><input type='text' name='subject' autofocus></td></tr>
-<tr><th>Message</th><td><textarea name='message'></textarea></td></tr>
-<tr><th></th><td class='center'><input type='submit' value='Send Mail'></td><tr>
-</table>
+<input type='text' name='subject' require autofocus placeholder='Subject'>
+<br>
+<textarea name='message' required placeholder="Message"></textarea>
+<br>
+<input type='submit' value='Send Mail'>
 <input type='hidden' name='name' value='$name'>
 </form>
-<a href="/">Return to Applitec Home Page</a>
+
 </main>
 $footer
 EOF;

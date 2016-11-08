@@ -29,8 +29,6 @@ define('SITE_INCLUDES', SITE_ROOT."/includes"); // SITE_ROOT is defined in sitea
 
 // Email info and logfile location
 
-define('LOGFILE', "/tmp/database.log");
-
 define('EMAILADDRESS', "bartonphillips@gmail.com");
 define('EMAILRETURN', "bartonphillips@gmail.com");
 define('EMAILFROM', "webmaster@bartonlp.com");
@@ -53,13 +51,15 @@ $dbinfo = array('host' => 'localhost',
 
 $siteinfo = array('siteDomain' => "applitec.com",
                   'emailDomain' => "applitec.com",
-                  'siteName' => null,
+                  'siteName' => "Applitec",
                   'className' => "Applitec",
                   'path' => "/var/www/applitec",
                   'copyright' => "2016 Applited Technology Resources Inc.",
+                  'author' => "Barton L. Phillips, Applitec Inc., mailto:barton@applitec.com",                  
                   //'memberTable' => "blpmembers", // www.bartonlp.com has not members
                   'dbinfo' => $dbinfo,
-                  'headFile' => "head.i.php", // Custom for admin dir.
+                  'masterdb' => 'barton',                  
+                  'headFile' => "custom_head.i.php", // Custom for admin dir.
                   'bannerFile' => "../includes/banner.i.php",
                   'footerFile' => "../includes/footer.i.php",
                   'count' => false,

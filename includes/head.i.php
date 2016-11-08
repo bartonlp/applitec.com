@@ -16,8 +16,8 @@ return <<<EOF
   <link rev="MADE" href="mailto:barton@applitec.com"> 
   <!-- Link our custom CSS -->
   <link rel="stylesheet" href="css/nav.css">
-{$arg['link']}
   <link rel="stylesheet" title="Applitec Style Sheet" href="css/applitec.css">
+{$arg['link']}
   <!-- jQuery -->
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
   <script>
@@ -26,9 +26,7 @@ jQuery(document).ready(function($) {
   $("#logo").attr('src', "/tracker.php?page=script&id=$this->LAST_ID");
 });
   </script>
-  <script src="http://bartonlp.com/html/js/fingerprint2.js"></script>
-  <script src="http://bartonlp.com/html/js/fingerprint.js"></script>
-  <script async src="/blp/js/tracker.js"></script>
+  <script async src="http://bartonphillips.net/js/tracker.js"></script>
 {$arg['extra']}
 {$arg['script']}
 {$arg['css']}

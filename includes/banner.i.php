@@ -5,37 +5,33 @@ return <<<EOF
 <a href="/">
 Applied Technology Resources,&nbsp;Inc.
 </a>
-<img id='logo' src='/blp/images/blank.png'>
+<img id='logo' src='http://bartonphillips.net/images/blank.png'>
 <img id='dummyimg' src='/tracker.php?page=normal&id=$this->LAST_ID'>
 </div>
 <nav>
 <!-- Big Nav Map -->
 <div id="navMap">
 <ul>
- <li>
- <a href="applitecSitemap.php">
- Site Map
- </a>
- </li>
-
- <li>
- <a href="AtriBio.php">
- Company Information
- </a>
- </li>
-
- <li>
- <a href="refrenc.php">
- References
- </a>
- </li>
-
- <li>
- <a href="contactus.php">
- Contact Us
- </a>
- </li>
-
+  <li>
+    <a href="applitecSitemap.php">
+      Site Map
+    </a>
+  </li>
+  <li>
+    <a href="AtriBio.php">
+      Company Information
+    </a>
+  </li>
+  <li>
+    <a href="refrenc.php">
+      References
+    </a>
+  </li>
+  <li>
+    <a href="contactus.php">
+      Contact Us
+    </a>
+  </li>
 </ul>
 </div>
 

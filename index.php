@@ -1,13 +1,13 @@
 <?php
-//$AutoLoadDEBUG = true;
-$_site = require_once(getenv("HOME")."/includes/siteautoload.class.php");
-
-$S = new $_site['className']($_site);
+$_site = require_once(getenv("SITELOAD")."/siteload.php");
+ErrorClass::setDevelopment(true);
+$S = new $_site->className($_site);
 
 $h->title = "AppliTech Home Page: -- Electrical, Software, ".
             "Firmware Engineering Consulting";
 
 list($top, $footer) = $S->getPageTopBottom($h);
+
 echo <<<EOF
 $top
 <!-- Main body of the page -->

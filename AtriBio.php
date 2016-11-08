@@ -1,17 +1,23 @@
 <?php
-// BLP 2015-01-14 -- use siteautoload
-$_site = require_once(getenv("HOME")."/includes/siteautoload.class.php");
-$S = new $_site['className']($_site);
+$_site = require_once(getenv("SITELOAD")."/siteload.php");
+ErrorClass::setDevelopment(true);
+$S = new $_site->className($_site);
 
 $h->title = "AppliTech Company Information -- Electrical, Software, ".
             "Firmware Engineering Consulting";
+
+$h->css = <<<EOF
+  <style>
+.underline { text-decoration: underline; }
+  </style>
+EOF;
 
 list($top, $footer) = $S->getPageTopBottom($h);
 
 echo <<<EOF
 $top
 <main id="top">
-<img src="/blp/images/museum.gif" alt="">
+<img src="http://bartonphillips.net/images/museum.gif" alt="">
 <h2>Company Information</h2>
 <p><i>Appli</i><b>Tech</b> was founded in 1987 to provide
 its clients technical capabilities of unique depth
@@ -30,7 +36,7 @@ to assume complete project responsibility we are here to help you.
 </p>
 
 <p><b>Representative Industries and
-Clients:&nbsp;<a href="#top"><img src="/blp/images/back.gif" alt="Return to top"
+Clients:&nbsp;<a href="#top"><img src="http://bartonphillips.net/images/back.gif" alt="Return to top"
 border="0" height="40" width="40"></a></b>
 </p>
 <ul>
@@ -39,7 +45,7 @@ border="0" height="40" width="40"></a></b>
 <dd><i>Walt Disney Imagineering</i></dd>
 <br>
 <dt>Medical &amp; Banking</dt>
-<dd><i>IRIS International, Inc.</i></dd>
+<dd><i>Beckman Coulter</i></dd>
 <dd>9172 Eton Avenue</dd>
 <dd>Chatsworth, CA 91311-5874</dd>
 <br>
@@ -48,26 +54,25 @@ border="0" height="40" width="40"></a></b>
 <dd>Arcadia, CA 91006-0020 USA</dd>
 <br>
 <dt>Test & Measurement:</dt>
-<dd><i>IRIS International, Inc.</i></dd>
+<dd><i>Beckman Coulter</i></dd>
 <dd>9172 Eton Avenue</dd>
 <dd>Chatsworth, CA 91311-5874</dd>
 <br>
 <dt>Manufacturing:</dt>
 <dd><i>Miyachi Unitek Corporation 2011</i></dd>
-<dd>1820 S. Myrtle Ave., Monrovia, CA 91016 USA</dd>
+<dd>1820 S. Myrtle Ave.
+<dd> Monrovia, CA 91016 USA</dd>
 </dl>
 </ul>
 <hr>
 
 <h2><i>Appli</i><b>Tech</b> Principals</h2>
 
-<h3>
-<a name="owner"></a>Glen H. Humphrey &ndash; President.&nbsp;
-<a href="#top"><img src="/blp/images/back.gif" alt="Return to top"
+<h3 id="owner">Glen H. Humphrey &ndash; President.&nbsp;
+<a href="#top"><img src="http://bartonphillips.net/images/back.gif" alt="Return to top"
 border="0" height="40" width="40"></a>&nbsp; 
-<a href="mailto:glen@applitec.com">ghumphrey@applitec.com</a>
-<a href="mailto:applitec@instanet.com">&nbsp;</a>
-<a href="mailto:glen@applitec.com"><img src="/blp/images/butmail.gif" alt="Email Glen" border="0"
+<a href="contactus.php?name=ghumphrey">ghumphrey@applitec.com</a>
+<a href="contactus.php?name=ghumphrey"><img src="http://bartonphillips.net/images/butmail.gif" alt="Email Glen" border="0"
 height="59" width="34"></a>
 </h3>
 
@@ -88,12 +93,12 @@ and electronics hardware design.</p>
 Barton L. Phillips  
 &nbsp;
 <a href="#top">
-  <img src="/blp/images/back.gif" alt="Return to top" border="0" height="40" width="40"> <!--  -->
+  <img src="http://bartonphillips.net/images/back.gif" alt="Return to top" border="0" height="40" width="40">
 </a>
 &nbsp;
-<a href="mailto:barton@applitec.com">barton@applitec.com&nbsp;</a>
-<a href="mailto:barton@applitec.com">
-  <img src="/blp/images/butmail.gif" alt="Email Barton" border="0" height="59" width="34">
+<a href="contactus.php?name=barton">barton@applitec.com&nbsp;</a>
+<a href="contactus.php?name=barton">
+  <img src="http://bartonphillips.net/images/butmail.gif" alt="Email Barton" border="0" height="59" width="34">
 </a>
 </h3>
 
@@ -118,12 +123,12 @@ of California at Los Angeles in 1964.</p>
 Alan Marcnak
 &nbsp;
 <a href="#top">
-  <img src="/blp/images/back.gif" alt="Return to top" border="0" height="40" width="40"> <!--  -->
+  <img src="http://bartonphillips.net/images/back.gif" alt="Return to top" border="0" height="40" width="40">
 </a>
 &nbsp;
-<a href="mailto:alan@applitec.com">alan@applitec.com&nbsp;</a>
-<a href="mailto:alan@applitec.com">
-  <img src="/blp/images/butmail.gif" alt="Email Allan" border="0" height="59" width="34">
+<a href="contactus.php?name=alan">alan@applitec.com&nbsp;</a>
+<a href="contactus.php?name=alan">
+  <img src="http://bartonphillips.net/images/butmail.gif" alt="Email Allan" border="0" height="59" width="34">
 </a>
 </h3>
 
@@ -137,9 +142,9 @@ prototype construction, surface mount work, test, debug, documentation, and on-s
 Mr. Marcinak has a BS in Electronic Engineering Technology from California Polytechnic State University, San Luis Obispo, CA.
 </p>
 
-<p><a href="#top"><img src="/blp/images/back.gif" alt="Return to top" border="0" height="40"
-width="40"></a><br>
-<a href="/">Return to Applitec Home Page</a>
+<p><a href="#top"><img src="http://bartonphillips.net/images/back.gif" alt="Return to top" border="0" height="40"
+width="40"></a><br><br>
+
 </main>
 $footer
 EOF;

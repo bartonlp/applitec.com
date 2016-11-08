@@ -5,14 +5,13 @@ html {
   margin: auto;
 }
 body {
-  background-image: url(http://bartonlp.com/html/images/Strip5.png);
+  background-image: url(http://bartonphillips.net/images/Strip5.png);
   background-size: 45px;
   background-repeat: repeat-y;
   background-color: rgb(255,255,239);
   margin-left: 43px;
   margin-right: 5px;
   margin-top: 0;
-  font-size: 1rem;
 }
 body, p, h1, h2, h3, font, table, form, td, th, tr, li, ul {
   font-family: serif;
@@ -74,25 +73,6 @@ h3 {
 .inline {
   display: inline;
 }
-
-/* Hit counter in counter.phpi */
-
-#hitCntr {
-	text-align: center;
-}
-#hitCntr div {
-  margin-top: 15px;
-  margin-bottom: 10px;
-}
-#hitCntr span {
-  background-color: rgb(255,255,239); 
-  font-family: sans-serif;
-  font-size: 1.5rem; 
-  color: rgb(123,16,66); 
-  padding: 5px 10px 5px 10px; 
-  border: 8px rgb(255,255,100) groove;
-}
-
 /* index.php */
 #applitecServices {
   border: 0;
@@ -138,13 +118,41 @@ h3 {
   padding-left: 2rem;
 
 }
-
+/*
+  The #hitCounter... are for the SiteClass::getCounterWigget() which can be at the bottom of the page.
+  #F5DEB3==rgb(245,222,179) is 'wheat' for the background
+  rgb(123, 16, 66) is a burgundy for the number
+*/  
+#hitCounter {
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+        text-align: center;
+}
+#hitCountertbl {
+        font-size: 1em;
+        width: 0;
+        border: 8px ridge yellow;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: #F5DEB3
+}
+#hitCountertr {
+        width: 0;
+        border: 8px ridge yellow;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: #F5DEB3
+}
+#hitCounterth {
+        color: rgb(123, 16, 66);
+}
+/* media layout */
 @media (min-width: 1024px) {
-        body {
-                font-size: 1.5rem;
+        html {
+                font-size: 24px;
         }
 }
-
 @media (max-width: 740px) {
         #navMap {
                 display: none;
@@ -152,8 +160,8 @@ h3 {
         #smallNavMap {
                 display: block;
         }
-        img[src="http://bartonlp.com/html/images/back.gif"],
-        img[src="http://bartonlp.com/html/images/butmail.gif"] {
+        img[src="http://bartonphillips.net/images/back.gif"],
+        img[src="http://bartonphillips.net/images/butmail.gif"] {
                 display: none;
         }
         main > img {

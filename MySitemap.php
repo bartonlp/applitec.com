@@ -20,7 +20,8 @@
 define('TOP', '/var/www'); // for bartonlp.com which is like our Dell-530 home system.
 define('INCLUDES', TOP."/includes"); // /var/www/includes
 define('DATABASE_ENGINES', INCLUDES."/database-engines");
-define('SITE_INCLUDES', SITE_ROOT."/includes"); // SITE_ROOT is defined in siteautoload.php!
+//define('SITE_INCLUDES', SITE_ROOT."/includes"); // SITE_ROOT is defined in siteautoload.php!
+define('SITE_INCLUDES', __DIR__ ."/includes");
 
 // Email info
 
@@ -44,11 +45,13 @@ $dbinfo = array('host' => 'localhost',
 // See the SiteClass constructor for other possible values like 'count',
 // 'emailDomain' etc.
 
+$__year = date('Y');
+
 $siteinfo = array('siteDomain' => "applitec.com",
                   'siteName' => "Applitec",
                   //'emailDomain' => "applitec.com",
                   'path' => '/var/www/applitec',
-                  'copyright' => "2016 Applied Technology Resources Inc.",
+                  'copyright' => "$__year Applied Technology Resources Inc.",
                   'author' => "Barton L. Phillips, Applitec Inc., mailto:barton@applitec.com",
                   'className' => "SiteClass",
                   //'memberTable' => "applitec",
@@ -59,8 +62,10 @@ $siteinfo = array('siteDomain' => "applitec.com",
                   'footerFile' => SITE_INCLUDES."/footer.i.php",
                   'count' => true,
                   'countMe' => true, // Count BLP
-                  'analysis' => true, // at barton.analysis table
                   'trackerImg1' => "/images/blank.png", // script
                   'trackerImg2' => "/images/blank.png", // normal
-                  'myUri' => "bartonphillips.dyndns.org"
+                  'myUri' => "bartonphillips.dyndns.org",
+                  'EMAILADDRESS' => EMAILADDRESS,
+                  'EMAILRETURN' =>EMAILRETURN,
+                  'EMAILFROM' => EMAILFROM,
                  );
