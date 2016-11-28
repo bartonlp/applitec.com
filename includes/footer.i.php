@@ -8,8 +8,7 @@ Return to Applitec <a class='underline' href="/">Home Page</a>
 {$arg['msg']}
 
 {$arg['msg1']}
-<h2 class='center'><a href="webstats-new.php">Web Stats</a><br>
-<a href="aboutwebsite.php">About This Site</a></h2>
+<h2 class='center'><a href="aboutwebsite.php">About This Site</a></h2>
 <address>
   Copyright &copy; $this->copyright<br>
   23542 Lyons Ave. #209<br>
