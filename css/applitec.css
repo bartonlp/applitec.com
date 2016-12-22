@@ -9,6 +9,7 @@ body {
   background-size: 45px;
   background-repeat: repeat-y;
   background-color: rgb(255,255,239);
+  
   margin-left: 43px;
   margin-right: 5px;
   margin-top: 0;
@@ -17,6 +18,13 @@ body, p, h1, h2, h3, font, table, form, td, th, tr, li, ul {
   font-family: serif;
 }
 main {
+/*Xmas*/
+        background-image: url(http://bartonphillips.net/images/bksnoscene.jpg);
+        background-repeat: repeat-y;
+        background-position:top; 
+        background-size: 100%;
+        background-attachment: fixed;
+/**/
         padding: 10px;
 }
 footer {
@@ -82,11 +90,25 @@ h3 {
   text-align: center;
 }
 #appservEE {
+/*Xmas*/
+        background-image: url(http://bartonphillips.net/images/bksnoscene.jpg);
+        background-repeat: repeat-y;
+        background-position:top; 
+        background-size: 100%;
+        background-attachment: fixed;
+/**/
   background-color: #F8F8D2;
   border: 2px solid black;
   padding-left: 2rem;
 }
 #appservPD {
+/*Xmas*/
+        background-image: url(http://bartonphillips.net/images/bksnoscene.jpg);
+        background-repeat: repeat-y;
+        background-position:top; 
+        background-size: 100%;
+        background-attachment: fixed;
+/**/
   background-color: #F0DEDF;
   border: 2px solid black;
   padding-left: 2rem;
@@ -98,6 +120,13 @@ h3 {
 
 }
 #appservCAD {
+/*Xmas*/
+        background-image: url(http://bartonphillips.net/images/bksnoscene.jpg);
+        background-repeat: repeat-y;
+        background-position:top; 
+        background-size: 100%;
+        background-attachment: fixed;
+/**/
   background-color: silver;
   color: black;
   border: 2px solid black;
