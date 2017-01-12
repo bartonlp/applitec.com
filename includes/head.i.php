@@ -15,8 +15,8 @@ return <<<EOF
         USB, C, C++">
   <link rev="MADE" href="mailto:barton@applitec.com"> 
   <!-- Link our custom CSS -->
-  <link rel="stylesheet" href="css/nav.css">
-  <link rel="stylesheet" title="Applitec Style Sheet" href="css/applitec.css">
+  <link rel="stylesheet" href="http://bartonphillips.net/css/nav.css">
+  <link rel="stylesheet" title="Applitec Style Sheet" href="http://bartonphillips.net/css/applitec.css">
 {$arg['link']}
   <!-- jQuery -->
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
