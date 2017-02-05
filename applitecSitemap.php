@@ -35,7 +35,6 @@ $top
 <li><a href="refrenc.php">References</a></li>
 <li><a href="contactus.php">Contact Us</a></li>
 <li><a href="aboutwebsite.php">About This Website</a></li>
-<li><a href="webstats-new.php">Webstats</a></li>
 </ul>
 </main>
 $footer

@@ -16,7 +16,7 @@ list($top, $footer) = $S->getPageTopBottom($h);
 
 echo <<<EOF
 $top
-<main id="top">
+<main>
 <img src="http://bartonphillips.net/images/museum.gif" alt="">
 <h2>Company Information</h2>
 <p><i>Appli</i><b>Tech</b> was founded in 1987 to provide
