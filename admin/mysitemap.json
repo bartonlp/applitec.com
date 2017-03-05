@@ -10,7 +10,7 @@
         "host": "localhost",
         "user": "barton",
         "password": "7098653",
-        "database": "applitecdotcom",
+        "database": "applitec",
         "engine": "mysqli"
     },
     "masterdb": "barton",

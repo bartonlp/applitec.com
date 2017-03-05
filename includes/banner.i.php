@@ -11,22 +11,22 @@ return <<<EOF
     <div id="navMap">
       <ul>
         <li>
-          <a href="applitecSitemap.php">
+          <a href="/applitecSitemap.php">
             Site Map
           </a>
         </li>
         <li>
-          <a href="AtriBio.php">
+          <a href="/AtriBio.php">
             Company Information
           </a>
         </li>
         <li>
-          <a href="refrenc.php">
+          <a href="/refrenc.php">
             References
           </a>
         </li>
         <li>
-          <a href="contactus.php">
+          <a href="/contactus.php">
             Contact Us
           </a>
         </li>
@@ -39,10 +39,10 @@ return <<<EOF
       <input type="checkbox" id="smallmenu" role="button">
       <ul id="smenu">
         <li><a href="/">Home</a></li>
-        <li><a href="applitecSitemap.php">Site Map</a></li>
-        <li><a href="AtriBio.php">Company Info</a></li>
-        <li><a href="refrenc.php">References</a></li>
-        <li><a href="contactus.php">Contact Us</a></li>
+        <li><a href="/applitecSitemap.php">Site Map</a></li>
+        <li><a href="/AtriBio.php">Company Info</a></li>
+        <li><a href="/refrenc.php">References</a></li>
+        <li><a href="/contactus.php">Contact Us</a></li>
       </ul>
     </div>
   </nav>

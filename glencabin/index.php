@@ -1,46 +1,50 @@
 <?php
-// BLP 2015-02-01 -- Moved to digitalocean.com
+// Glen & Tina's Cabin in Big Bear and their Home
+// BLP 2017-03-02 -- Reworked to use SITELOAD
 
-$files = array('DCS-920.jpg', 'DCS-920a.jpg', 'asante_.jpg');
+$_site = require_once(getenv("SITELOAD")."/siteload.php");
+$S = new $_site->className($_site);
+
+$files = array('newjpg.jpg'=>'Home Front Yard', 'DCS-920.jpg'=>'Home Back Yard',
+               'DCS-920a.jpg'=>'Cabin Fron Yard', 'asante_.jpg'=>'Cabin Back Yard');
+
 date_default_timezone_set('America/Los_Angeles');
 
-foreach($files as $v) {
-  $tm = filemtime($v);
+$info = '';
+foreach($files as $k=>$v) {
+  $tm = filemtime($k);
   $tt = date("Y-m-d H:i:s T", $tm);
-  $info[$v] = $tt;
+  $info .= <<<EOF
+$tt $v<br>
+<img src="$k" alt="$v">
+EOF;
 }
 
-echo <<<EOF
-<!DOCTYPE html>
-<html>
-<head>
-<title>Glen's Cabin in Big Bear</title>
-
-<style>
+$h->css =<<<EOF
+  <style>
 h1, h2 { text-align: center; }
 #picture {
 	margin-left: auto;
 	margin-right: auto;
 	width: 810px;
 }
-</style>
-</head>
-<body>
-<h1>Glen and Tina's Cabin in Big Bear and Home</h1>
-<h2>Web Cam</h2>
+#picture img {
+  width: 800px;
+}
+  </style>
+EOF;
+$h->banner = "<h1>Glen and Tina's Cabin in Big Bear and Home</h1><h2>Web Cam</h2>";
+
+list($top, $footer) = $S->getPageTopBottom($h);
+
+echo <<<EOF
+$top
 <hr/>
 <div id='picture'>
-{$info['DCS-920.jpg']} Home Back Yard<br>
-<img style="width: 800px" src='DCS-920.jpg' alt='web cam picture' />
-{$info['DCS-920a.jpg']} Cabin Front Yard<br>
-<img style="width: 800px" src='DCS-920a.jpg' alt='web cam picture' />
-
-<p>New Camera:</p>
-{$info['asante_.jpg']} Cabin Back Yard<br>
-<img style='width: 800px;' src='asante_.jpg' alt='new web cam' />
+$info
 </div>
-</body>
-</html>
+<hr>
+$footer
 EOF;
 
 
