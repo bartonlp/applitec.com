@@ -42,8 +42,10 @@ $top
 <hr/>
 <div id='picture'>
 $info
+<p><a href='alarm.php'>Check Alarms</a></p>
 </div>
 <hr>
+
 $footer
 EOF;
 
