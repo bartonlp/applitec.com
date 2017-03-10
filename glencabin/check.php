@@ -32,7 +32,7 @@ while(true) {
 
   if(!empty($tmp)) {
     $n = (count($tmp) -1) / 2;
-    if($n > 5) {
+    if($n > 10) {
       sort($tmp);
       for($i=0; $i < $n; ++$i) {
         echo "removing $tmp[$i]\n";
