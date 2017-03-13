@@ -4,7 +4,7 @@ return <<<EOF
   <div id="topTitleDiv">
     <a href="/">Applied Technology Resources,&nbsp;Inc.</a>
     <img id='logo' src='http://bartonphillips.net/images/blank.png'>
-    <img id='dummyimg' src='/tracker.php?page=normal&id=$this->LAST_ID'>
+    <img id='dummyimg' src='tracker.php?page=normal&id=$this->LAST_ID'>
   </div>
   <nav>
     <!-- Big Nav Map -->

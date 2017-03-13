@@ -1,11 +1,13 @@
 #!/usr/bin/php
 <?php
+// This file is run with 'nohup ./check.php&' and it puts its output into a file 'nohup.out'.
+// At some point I need to change this to a real daemon!
+//
 // Check the glencabin/FI9803P_00626E6C2B79/snap directory for any new files.
 // Uses inotify which is a pecl package.
 // sudo pecl install inotify
 // You need phpize which is in the php7.0-dev (sudo apt install php7.0-dev)
 // Then add it to php.ini. In this case I only added it to cli/php.ini
-// I can run this with 'nohup ./check.php'. I will look at adding it to 'init' or something next.
 
 echo "Start\n";
 
@@ -31,8 +33,8 @@ while(true) {
   $tmp = glob("/var/www/applitec/glencabin/FI9803P_00626E6C2B79/snap/*.jpg");
 
   if(!empty($tmp)) {
-    $n = (count($tmp) -1) / 2;
-    if($n > 10) {
+    if(count($tmp) > 10) {
+      $n = count($tmp) - 10;
       sort($tmp);
       for($i=0; $i < $n; ++$i) {
         echo "removing $tmp[$i]\n";

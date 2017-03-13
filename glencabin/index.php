@@ -33,6 +33,7 @@ h1, h2 { text-align: center; }
 }
   </style>
 EOF;
+
 $h->banner = "<h1>Glen and Tina's Cabin in Big Bear and Home</h1><h2>Web Cam</h2>";
 
 list($top, $footer) = $S->getPageTopBottom($h);
@@ -45,7 +46,6 @@ $info
 <p><a href='alarm.php'>Check Alarms</a></p>
 </div>
 <hr>
-
 $footer
 EOF;
 

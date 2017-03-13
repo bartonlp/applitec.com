@@ -1,7 +1,7 @@
 {
-    "siteDomain": "applitec.com",
-    "siteName": "Applitec",
-    "path": "/var/www/applitec",
+    "siteDomain": "applitec.com/glencabin",
+    "siteName": "Glencabin",
+    "path": "/var/www/applitec/glencabin",
     "copyright": "2017 Applied Technology Resources Inc.",
     "author": "Barton L. Phillips, Applitec Inc., mailto:barton@applitec.com",
     "className": "SiteClass",

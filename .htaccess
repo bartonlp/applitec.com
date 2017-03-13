@@ -3,6 +3,7 @@ allow from all
 # HOME only needed for siteautoload.
 SetEnv HOME /var/www
 SetEnv SITELOAD /var/www/vendor/bartonlp/site-class/includes
+SetEnv SITELOADNAME /var/www/vendor/bartonlp/site-class/includes/siteload.php
 
 # BEGIN EXPIRES
 <IfModule mod_expires.c>
