@@ -1,7 +1,8 @@
 <?php
+// BLP 2017-03-21 -- css/applitec.css and js/tracker.js are symlinks to
+// /var/www/bartonphillipsnet/css or js. This is for https.
+
 return <<<EOF
-<!DOCTYPE html> 
-<html>
 <head>
   <title>{$arg['title']}</title>
   <meta name=viewport content="width=device-width, initial-scale=1">
@@ -15,20 +16,21 @@ return <<<EOF
         USB, C, C++">
   <link rev="MADE" href="mailto:barton@applitec.com"> 
   <!-- Link our custom CSS -->
-  <link rel="stylesheet" title="Applitec Style Sheet" href="http://bartonphillips.net/css/applitec.css">
+  <link rel="stylesheet" title="Applitec Style Sheet" href="/css/applitec.css">
 {$arg['link']}
   <!-- jQuery -->
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
   <script>
 var lastId = $this->LAST_ID;
 jQuery(document).ready(function($) {
-  $("#logo").attr('src', "/tracker.php?page=script&id=$this->LAST_ID");
+  $("#logo").attr('src', "tracker.php?page=script&id=$this->LAST_ID");
 });
   </script>
-  <script async src="http://bartonphillips.net/js/tracker.js"></script>
+  <script async src="/js/tracker.js"></script>
 {$arg['extra']}
 {$arg['script']}
 {$arg['css']}
 </head>
 <body>
 EOF;
+ 

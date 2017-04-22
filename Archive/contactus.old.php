@@ -27,37 +27,10 @@ switch($_GET['name']) {
     break;
 }
 
-$s->siteclass = $S;
-$s->page = "contactus.php"; // the name of this page
-$s->itemname ="Message1"; // the item we want to get first
+$h->title = "AppliTech Contact Us -- Electrical, Software, ".
+            "Firmware Engineering Consulting";
 
-$u = new UpdateSite($s); // Should do this outside of the '// START UpdateSite ...' comments
-
-// Now getItem gets the info for the $s->itemname sections
-// The special comments around each getItem() are MANDATORY and are used by the UpdateSite class
-// to maintain the information in the 'site' table in the bartonphillipsdotorg database at
-// bartonphillips.com
-
-// START UpdateSite Message1
-$item = $u->getItem();
-// END UpdateSite Message1
-
-// If item is false then no item in table
-
-if($item !== false) {
-  $msg1 = $item['bodytext'];
-}
-
-$s->itemname ="CSS";
-
-// START UpdateSite CSS
-$item = $u->getItem($s);
-// END UpdateSite CSS
-
-if($item !== false) {
-  $CSS = $item['bodytext'];
-} else {
-  $CSS =<<<EOF
+$h->css =<<<EOF
   <style>
 main {
   margin-top: 2em;
@@ -67,31 +40,30 @@ main table {
 }
   </style>
 EOF;
-}
-   
-$s->itemname = "BANNER";
-
-// START UpdateSite BANNER
-$item = $u->getItem($s);
-// END UpdateSite BANNER
-
-if($item !== fasle) {
-  $BANNER = $item['bodytext'];
-}
-
-// End of UpdateSite logic
-
-$h->banner = $BANNER;
-$h->css = $CSS;
-
-$h->title = "AppliTech Contact Us -- Electrical, Software, ".
-            "Firmware Engineering Consulting";
 
 list($top, $footer) = $S->getPageTopBottom($h);
   
 echo <<<EOF
 $top
-$msg1
+<main>
+<h2>Contact us via E-Mail</h2>
+<div align="left">
+<table>
+  <tr>
+    <td>Glen Humphrey:</td>
+    <td><a href="contactus.php?name=ghumphrey">ghumphrey@applitec.com</a></td>
+  </tr>
+  <tr>
+    <td>Barton Phillips:</td>
+    <td><a href="contactus.php?name=barton">barton@applitec.com</a></td>
+  </tr>
+  <tr>
+    <td>Alan Marcnak:</td>
+    <td><a href="contactus.php?name=alan">alan@applitec.com</a></td>
+  </tr>
+</table>
+</div>
+</main>
 $footer
 EOF;
 

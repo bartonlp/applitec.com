@@ -3,39 +3,67 @@ $_site = require_once(getenv("SITELOAD")."/siteload.php");
 ErrorClass::setDevelopment(true);
 $S = new $_site->className($_site);
 
-$h->title = "AppliTech Site Map -- Electrical, Software, ".
-            "Firmware Engineering Consulting";
+$s->siteclass = $S;
+$s->page = "applitecSitemap.php"; // the name of this page
+$s->itemname ="Message1"; // the item we want to get first
 
-$h->css =<<<EOF
+$u = new UpdateSite($s); // Should do this outside of the '// START UpdateSite ...' comments
+
+// Now getItem gets the info for the $s->itemname sections
+// The special comments around each getItem() are MANDATORY and are used by the UpdateSite class
+// to maintain the information in the 'site' table in the bartonphillipsdotorg database at
+// bartonphillips.com
+
+// START UpdateSite Message1
+$item = $u->getItem();
+// END UpdateSite Message1
+
+// If item is false then no item in table
+
+if($item !== false) {
+  $msg1 = $item['bodytext'];
+}
+
+$s->itemname ="CSS";
+
+// START UpdateSite CSS
+$item = $u->getItem($s);
+// END UpdateSite CSS
+
+if($item !== false) {
+  $CSS = $item['bodytext'];
+} else {
+  $CSS =<<<EOF
   <style>
 main {
   margin-top: 2em;
 }
   </style>
 EOF;
+}
+   
+$s->itemname = "BANNER";
+
+// START UpdateSite BANNER
+$item = $u->getItem($s);
+// END UpdateSite BANNER
+
+if($item !== fasle) {
+  $BANNER = $item['bodytext'];
+}
+
+// End of UpdateSite logic
+
+$h->banner = $BANNER;
+$h->css = $CSS;
+
+$h->title = "AppliTech Site Map -- Electrical, Software, ".
+            "Firmware Engineering Consulting";
 
 list($top, $footer) = $S->getPageTopBottom($h);
 
 echo <<<EOF
 $top
-<main>
-<table>
-<tr>
-<td>
-<img src="http://bartonphillips.net/images/CIRCULA.gif" alt="">
-</td>
-<td valign=bottom><h1>Site Map</h1></td>
-</tr>
-</table>
-
-<hr>
-<ul>
-<li><a href="index.php">Applitec Home Page</a></li>
-<li><a href="AtriBio.php">Company Information and Biography</a></li>
-<li><a href="refrenc.php">References</a></li>
-<li><a href="contactus.php">Contact Us</a></li>
-<li><a href="aboutwebsite.php">About This Website</a></li>
-</ul>
-</main>
+$msg1
 $footer
 EOF;

@@ -1,0 +1,25 @@
+# Example of a systemd 'service' file. This is in /etc/systemd/system.
+# This is for the 'glencabin' check-daemon.php 
+# Install this in the /etc/systemd/system directory.
+# Then 'sudo systemctl enable glencabin.service'
+# Then you can do 'sudo systemctl start glencabin.service'
+# You can then do 'sudo systemctl status glencabin.service' to see if it is running.
+# The program it will run is '/var/www/applitec/glencabin/check-daemon.php'.
+# The pid of the running daemon goes into '/var/www/applitec/glencabin/check-daemon.pid' while it is running.
+# After=apache2.service says that this loads after apache2
+# Restart=on-failure and RestartSec=10sec says if the program exits with an error it should be restarted after a 10 seconds.
+# WantedBy=network-online.target says that this will run only after the network is up.
+
+[Unit]
+Description=check-daemon.php for glencabin
+After=apache2.service
+
+[Service]
+Type=forking
+ExecStart=/var/www/applitec/glencabin/check-daemon.php
+PIDFile=/var/www/applitec/glencabin/check-daemon.pid
+Restart=on-failure
+RestartSec=10sec
+
+[Install]
+WantedBy=network-online.target
