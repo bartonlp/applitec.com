@@ -16,7 +16,7 @@ return <<<EOF
         USB, C, C++">
   <link rev="MADE" href="mailto:barton@applitec.com"> 
   <!-- Link our custom CSS -->
-  <link rel="stylesheet" title="Applitec Style Sheet" href="/css/applitec.css">
+  <link rel="stylesheet" title="Applitec Style Sheet" href="https://bartonphillips.net/css/applitec.css">
 {$arg['link']}
   <!-- jQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
@@ -26,7 +26,7 @@ jQuery(document).ready(function($) {
   $("#logo").attr('src', "tracker.php?page=script&id=$this->LAST_ID");
 });
   </script>
-  <script async src="/js/tracker.js"></script>
+  <script async src="https://bartonphillips.net/js/tracker.js"></script>
 {$arg['extra']}
 {$arg['script']}
 {$arg['css']}
