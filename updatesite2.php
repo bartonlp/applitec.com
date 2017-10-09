@@ -65,9 +65,7 @@ $footer = $S->getPageFooter("<br><a href='http://www.bartonphillips.com/howtowri
 
 // Load updatesite.class.php
 
-$s->site = "www.applitec.com";
-
-UpdateSite::secondHalf($S, $h, $s);
+UpdateSite::secondHalf($S, $h);
 
 // footer created in secondHalf()
 
