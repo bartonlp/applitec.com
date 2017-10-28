@@ -4,8 +4,13 @@
 // Uses inotify which is a pecl package.
 // sudo pecl install inotify
 // You need phpize which is in the php7.0-dev (sudo apt install php7.0-dev)
-// Then add it to php.ini. In this case I only added it to cli/php.ini
-  
+// Then add it to php.ini. In this case I only added it to cli/php.ini (extension=inotify.so)
+
+// IMPORTANT INFO
+// This is a systemd service. The file glencabin.service (in this directory) gets moved to
+// /etc/systemd/system and systemd runs this file. See the 'glencabin.service' file for more
+// /details.
+
 file_put_contents("/var/www/applitec/glencabin/check-daemon.pid", "");
 
 $pid = pcntl_fork();
@@ -81,4 +86,8 @@ while(true) {
       }
     }
   }
+
+  // Remove everything from .../record
+
+  array_map('unlink', glob("/var/www/applitec/glencabin/FI9803P_00626E6C2B79/record/*"));
 }
