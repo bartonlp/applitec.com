@@ -61,7 +61,7 @@ jQuery(document).ready(function() {
   </script>
 EOF;
 
-$footer = $S->getPageFooter("<br><a href='http://www.bartonphillips.com/howtowritehtml.php'>How to write HTML</a><br>");
+$footer = $S->getPageFooter("<br><a href='https://www.bartonphillips.com/howtowritehtml.php'>How to write HTML</a><br>");
 
 // Load updatesite.class.php
 
