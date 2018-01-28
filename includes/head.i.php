@@ -18,7 +18,7 @@ return <<<EOF
   <!-- Link our custom CSS -->
   <link rel="stylesheet" title="Applitec Style Sheet" href="https://bartonphillips.net/css/applitec.css">
   <!-- css is not css but a link to tracker via .htaccess RewriteRule. -->
-  <link rel="stylesheet" href="/csstest.css?id=$this->LAST_ID" title="blp test">
+  <link rel="stylesheet" href="/csstest-{$this->LAST_ID}.css" title="blp test">
 
 {$arg['link']}
   <!-- jQuery -->
