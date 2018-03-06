@@ -2,7 +2,7 @@
     "siteDomain": "applitec.com",
     "siteName": "Applitec",
     "path": "/var/www/applitec",
-    "copyright": "2017 Applied Technology Resources Inc.",
+    "copyright": "2018 Applied Technology Resources Inc.",
     "author": "Barton L. Phillips, Applitec Inc., mailto:barton@applitec.com",
     "className": "SiteClass",
     "masterdb": "barton",
