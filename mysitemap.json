@@ -2,7 +2,7 @@
     "siteDomain": "applitec.com",
     "siteName": "Applitec",
     "path": "/var/www/applitec",
-    "copyright": "2018 Applied Technology Resources Inc.",
+    "copyright": "Applied Technology Resources Inc.",
     "author": "Barton L. Phillips, Applitec Inc., mailto:barton@applitec.com",
     "className": "SiteClass",
     "masterdb": "barton",
@@ -21,7 +21,7 @@
     "ctrmsg": "Counter Reset: Feb. 4, 2017",
     "trackerImg1": null,
     "trackerImg2": null,
-    "myUri": "bartonphillips.dyndns.org",
+    "myUri": "https://bartonphillips.net/myUri.json",
     "EMAILADDRESS": "bartonphillips@gmail.com",
     "EMAILRETURN": "bartonphillips@gmail.com",
     "EMAILFROM": "webmaster@applitec.com"
