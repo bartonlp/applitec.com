@@ -1,8 +1,10 @@
 <?php
 $_site = require_once(getenv("SITELOADNAME"));
-//ErrorClass::setDevelopment(true);
+ErrorClass::setDevelopment(true);
+ErrorClass::setNoEmailErrs(true);
 $S = new $_site->className($_site);
 
+/*
 $s->siteclass = $S;
 $s->page = "index.php"; // the name of this page
 $s->itemname ="Message1"; // the item we want to get first
@@ -48,9 +50,10 @@ if($item !== fasle) {
 
 $h->banner = $BANNER;
 $h->css = $CSS;
+*/
 
 $h->title = "AppliTech Home Page: -- Electrical Consultine";
-
+$msg1 = "<h1>Gone To Disnyland</h1>";
 list($top, $footer) = $S->getPageTopBottom($h);
 
 // ***********

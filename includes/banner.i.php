@@ -1,13 +1,12 @@
 <?php
+// BLP 2021-03-09 -- remove all navigation as site is no longer used 
 return <<<EOF
 <header>
   <div id="topTitleDiv">
     <a href="/">Applied Technology Resources,&nbsp;Inc.</a>
-    <img id='logo' src='https://bartonphillips.net/images/blank.png'>
-    <img id='dummyimg' src='tracker.php?page=normal&id=$this->LAST_ID'>
   </div>
+<!--
   <nav>
-    <!-- Big Nav Map -->
     <div id="navMap">
       <ul>
         <li>
@@ -33,7 +32,6 @@ return <<<EOF
       </ul>
     </div>
 
-    <!-- Nav bar for small screens -->
     <div id="smallNavMap">
       <label for="smallmenu" class="icon-menu">Menu</label>
       <input type="checkbox" id="smallmenu" role="button">
@@ -46,10 +44,11 @@ return <<<EOF
       </ul>
     </div>
   </nav>
+-->
+
   $mainTitle
   <noscript>
   <p style='color: red; background-color: #FFE4E1; padding: 10px'>
-  <!-- <img src="tracker.php?page=noscript&id=$this->LAST_ID"> -->
   Your browser either does not support <b>JavaScripts</b> or you have JavaScripts disabled, in either case your browsing
   experience will be significantly impaired. If your browser supports JavaScripts but you have it disabled consider enabaling
   JavaScripts conditionally if your browser supports that. Sorry for the inconvienence.</p>

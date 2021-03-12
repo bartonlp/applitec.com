@@ -1,15 +1,14 @@
 <?php
-// Glen & Tina's Cabin in Big Bear and their Home
-// BLP 2017-03-02 -- Reworked to use SITELOAD
-// BLP 2018-01-01 -- Changed the Cabin Back Yard sile to asanteCamera_.jpg
-
 $_site = require_once(getenv("SITELOADNAME"));
+ErrorClass::setDevelopment(true);
+ErrorClass::setNoEmailErrs(true);
 $S = new $_site->className($_site);
+
 
 $files = array('newjpg.jpg'=>'Home Front Yard', 'DCS-920.jpg'=>'Home Back Yard',
                'DCS-920a.jpg'=>'Cabin Front Yard', 'asanteCamera_.jpg'=>'Cabin Back Yard');
 
-date_default_timezone_set('America/Los_Angeles');
+date_default_timezone_set('America/New_York');
 
 $info = '';
 foreach($files as $k=>$v) {
@@ -49,6 +48,4 @@ $info
 <hr>
 $footer
 EOF;
-
-
 
