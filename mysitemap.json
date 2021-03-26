@@ -6,15 +6,6 @@
     "author": "Barton L. Phillips, Applitec Inc., mailto:barton@applitec.com",
     "className": "SiteClass",
     "masterdb": "barton",
-/*    
-    "dbinfo": {
-    "host": "localhost",
-    "user": "barton",
-    "password": "7098653",
-    "database": "applitec",
-    "engine": "mysqli"
-    },
-*/    
     "headFile": "/var/www/applitec/includes/head.i.php",
     "bannerFile": "/var/www/applitec/includes/banner.i.php",
     "footerFile": "/var/www/applitec/includes/footer.i.php",
