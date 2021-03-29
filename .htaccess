@@ -5,6 +5,9 @@ SetEnv HOME /var/www
 SetEnv SITELOAD /var/www/vendor/bartonlp/site-class/includes
 SetEnv SITELOADNAME /var/www/vendor/bartonlp/site-class/includes/siteload.php
 
+RewriteRule ^(\.git)/.*$ - [F,L]
+RewriteRule ^(\.gitignore|mysitemap\.json)$  - [F,L]
+
 # BEGIN EXPIRES
 <IfModule mod_expires.c>
   ExpiresActive On
