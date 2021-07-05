@@ -1,1 +1,1 @@
-../../bartonlp/beacon.php
+../../bartonphillipsnet/beacon.php

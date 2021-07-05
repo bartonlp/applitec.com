@@ -12,8 +12,6 @@
     "nodb": true,
     "count": false,
     "countMe": false,
-    "trackerImg1": null,
-    "trackerImg2": null,
     "myUri": "https://bartonphillips.net/myUri.json",
     "EMAILADDRESS": "bartonphillips@gmail.com",
     "EMAILRETURN": "bartonphillips@gmail.com",
